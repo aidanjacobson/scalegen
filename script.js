@@ -42,7 +42,9 @@ window.ontouchend = function() {
 }
 
 window.onload = function() {
-    mobilemode.onclick = function() {
-        alert("Hold your finger on the screen for 1 second to generate a new scale.");
+    mobilemode.onchange = function() {
+        if (mobilemode.checked) {
+            alert("Hold your finger on the screen for 1 second to generate a new scale.");
+        }
     }
 }
