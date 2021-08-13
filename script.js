@@ -17,3 +17,32 @@ function generateNewScale() {
     }
     frame();
 }
+
+var timeout;
+var ready = false;
+window.ontouchstart = function() {
+    if (!mobilemode.checked) return;
+    document.body.style.backgroundColor = "red";
+    ready = false;
+    timeout = setTimeout(function() {
+        document.body.style.backgroundColor = "green";
+        ready = true;
+    }, 1000);
+}
+
+window.ontouchend = function() {
+    if (!mobilemode.checked) return;
+    document.body.style.backgroundColor = "white";
+    if (!ready) {
+        clearTimeout(timeout);
+    } else {
+        ready = false;
+        generateNewScale();
+    }
+}
+
+window.onload = function() {
+    mobilemode.onclick = function() {
+        alert("Hold your finger on the screen for 1 second to generate a new scale.");
+    }
+}
