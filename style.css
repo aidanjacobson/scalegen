@@ -1,0 +1,16 @@
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    color: blue;
+    cursor: pointer;
+}
+
+body {
+    text-align: center;
+}
+
+#scaleOutput {
+    font-size: 100px;
+}
