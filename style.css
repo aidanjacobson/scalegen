@@ -13,4 +13,5 @@ body {
 
 #scaleOutput {
     font-size: 100px;
+    user-select: none;
 }
